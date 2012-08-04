@@ -1,0 +1,168 @@
+/*
+Theme Name: WP Litho
+Theme URI: http://wplitho.redwerks.org/
+Description: A general horizonal website theme.
+Author: Redwerks
+Author URI: http://redwerks.org/
+Version: 0.9.0
+*/
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 80%;
+	font-family: "Helvetica", "Arial", "Geneva", sans-serif;
+}
+
+article.post {
+	max-width: 640px;
+	width: 100%;
+	margin: 0 auto;
+	outline: none !important;
+}
+article.post .entry-content {
+	min-height: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	/* Overflow here does not overflow since we have no max. It acts as a forced box to prevent margins escaping. */
+	overflow: auto;
+}
+
+.mobile-featured-image {
+	display: none;
+}
+
+#logo {
+	background: transparent left center no-repeat;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+#nav {
+	float: right;
+}
+#nav ul,
+#nav li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+#nav li {
+	display: inline-block;
+}
+#nav a {
+	display: inline-block;
+	padding: 0.5em 1.5em;
+	/*text-transform: uppercase;*/
+	color: #dc0042;
+	text-decoration: none;
+	border-left: 1px dotted #ccc;
+}
+#nav li:first-child a {
+	border-left: 0;
+}
+
+.hpanelweb-container .hpanelweb-paneindicator {
+	width: 50px;
+}
+.hpanelweb-container .hpanelweb-paneindicator div {
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.hpanelweb-container .hpanelweb-paneindicator-left div { background-image: url(left-arrow.png); }
+.hpanelweb-container .hpanelweb-paneindicator-right div { background-image: url(right-arrow.png); }
+
+@media screen and (max-width: 500px) {
+
+	#header {
+		position: relative;
+		border-bottom: 1px dashed #ccc;
+		height: 45px;
+		line-height: 45px;
+	}
+	#logo {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 92px;
+		right: 0;
+	}
+	#home,
+	#nav {
+		display: block;
+		position: relative;
+		float: left;
+	}
+	#home a,
+	#nav .icon {
+		display: block;
+		width: 45px;
+		height: 45px;
+	}
+	#nav .icon {
+		border: 0px solid #999;
+		border-width: 0 1px;
+	}
+	#nav ul {
+		display: none;
+		position: absolute;
+		top: 45px;
+		left: 0;
+		width: 250px;
+		border: 1px dashed #555;
+		background-color: #fff;
+		z-index: 1;
+	}
+	#nav.visible ul {
+		display: block;
+	}
+	#nav li {
+		display: block;
+		border-top: 1px dashed #555;
+	}
+	#nav li:first-child {
+		border-top: none;
+	}
+	#nav li a {
+		width: 250px;
+		height: 45px;
+		line-height: 45px;
+		padding: 0 15px;
+		color: #000;
+	}
+
+	article.post .entry-content {
+		background-image: none !important;
+	}
+
+	.mobile-featured-image {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.nomobile {
+		display: none;
+	}
+
+}
+
+#home a {
+	background: url(home.png) center center no-repeat;
+	background-size: 25px 25px;
+}
+#nav .icon {
+	background: url(nav.png) center center no-repeat;
+	background-size: 25px 25px;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+	#home a { background-image: url(home-hdpi.png); }
+	#nav .icon { background-image: url(nav-hdpi.png); }
+}
