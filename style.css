@@ -137,6 +137,10 @@ article.post .entry-content {
 		color: #000;
 	}
 
+	article.post {
+		/* When we drop to smartphone size disable any max-width smaller than the screen */
+		max-width: 100% !important;
+	}
 	article.post .entry-content {
 		background-image: none !important;
 	}

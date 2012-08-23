@@ -53,8 +53,8 @@
 			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'wplitho' ), __( '1 Comment', 'wplitho' ), __( '% Comments', 'wplitho' ) ); ?></span>
 			<?php edit_post_link( __( 'Edit', 'wplitho' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-utility -->
-	</article><!-- #post-## -->
 <?php endif; ?>
+	</article><!-- #post-## -->
 
 	<?php comments_template( '', true ); ?>
 
